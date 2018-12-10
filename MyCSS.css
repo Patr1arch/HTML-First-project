@@ -1,18 +1,17 @@
 body{
-	background-color: ffe5b4;
+	background-color: #ffe5b4;
 	display: grid;
 	grid-template-columns: 0.7fr 1fr 0.7fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-gap: 5px;
 	height: 10px;
 	margin: 0;
-	text-align: center;
 }
 
-
-img.MyPhoto {
+.MyPhoto {
 	float: left;
 	width: 40%;
+	margin-right: 5px;
 }
 
 img{
@@ -20,42 +19,85 @@ img{
 	height: auto;
 }
 
-img.Icon {
-	height: auto;
-	width: 30%;
+.Icon {
+	height: 150px;
+	width: 150px;
 }
 
 footer{
-	 text-align: right}
+	 text-align: right
 }
 
 video {
 	width: 100%;
 }
 
-#Trash {
-	<a href="Fints&Piruets5.html"> О себе </a> ;
-	<a href="Fints&Piruets3.html"> Творческий контент </a>;
-	<a href="Fints&Piruets4.html"> Стихотворение </a> ;
+nav {
+	text-align: left;
 }
 
-.Menu {
-	margin-left: 2px;
-	margin-top: 2px;
-	padding: 10px;
-	margin-bottom: 0px;
-	width: 30%;
+nav ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
 }
 
-.TasksButton {
-	margin-left: 2px;
-	margin-top: 0px;
-	padding: 10px;
-	margin-bottom: 0px;
-	width: 30%;
-	display: none;
+nav ul li {
+	margin: 0px -7px 0 0;
+	display: inline-block;
+	background-color: #E64A19;
 }
 
-.Menu:hover {
-}	
-	
+nav a {
+	display:block;
+	padding:0 10px;
+	color: #FFF;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #000000;
+}
+
+nav ul ul{
+	display:none;
+	position:absolute;
+	top:100%;
+}
+
+nav ul li:hover > ul {
+	display: inherit;
+}
+
+nav ul ul li{
+	min-width: 170px;
+	float:none;
+	display:list-item;
+	position:relative;
+}
+
+nav ul ul ul{
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+
+.Poem {
+	text-align: center;
+	white-space: pre;
+}
+
+.AboutMe {
+	text-align: left;
+}
+
+.Author {
+	text-align: right;
+}
+
+article {
+	text-align: center
+}
