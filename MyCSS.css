@@ -101,3 +101,9 @@ nav ul ul ul{
 article {
 	text-align: center
 }
+
+@media print {	
+ body { font-family: Times, 'Times New Roman', serif; grid-template-columns: 1fr; }
+ h1, h2, h3, p, a { color: black; text-decoration: none; }
+ img, nav, video, footer, hr { display: none; }
+}
