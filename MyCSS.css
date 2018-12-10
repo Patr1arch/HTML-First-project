@@ -1,0 +1,61 @@
+body{
+	background-color: ffe5b4;
+	display: grid;
+	grid-template-columns: 0.7fr 1fr 0.7fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 5px;
+	height: 10px;
+	margin: 0;
+	text-align: center;
+}
+
+
+img.MyPhoto {
+	float: left;
+	width: 40%;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+img.Icon {
+	height: auto;
+	width: 30%;
+}
+
+footer{
+	 text-align: right}
+}
+
+video {
+	width: 100%;
+}
+
+#Trash {
+	<a href="Fints&Piruets5.html"> О себе </a> ;
+	<a href="Fints&Piruets3.html"> Творческий контент </a>;
+	<a href="Fints&Piruets4.html"> Стихотворение </a> ;
+}
+
+.Menu {
+	margin-left: 2px;
+	margin-top: 2px;
+	padding: 10px;
+	margin-bottom: 0px;
+	width: 30%;
+}
+
+.TasksButton {
+	margin-left: 2px;
+	margin-top: 0px;
+	padding: 10px;
+	margin-bottom: 0px;
+	width: 30%;
+	display: none;
+}
+
+.Menu:hover {
+}	
+	
