@@ -90,102 +90,159 @@
 		  </ol>
 		</nav>
 
-		<div class="container">
-			<table class="table table-striped table-bordered table-hover">
-			  <thead>
-			    <tr>
-			      <th>#</th>
-			      <th>Subject</th>
-			      <th>Certification method</th>
-			      <th>Made homework / lab work</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Web programming</td>
-			      <td>Exam</td>
-			      <td>30%</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">2</th>
-			      <td>Basics of combinatorics</td>
-			      <td>Test</td>
-			      <td>45%</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>Introdeuction in AaDS</td>
-			      <td>Exam</td>
-			      <td>30%</td>
-			    </tr>
-			  </tbody>
-			</table>
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="first-table-tab" data-toggle="tab" href="#first" role="tab" aria-controls="first" aria-selected="true">First Table</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="second-table-tab" data-toggle="tab" href="#second" role="tab" aria-controls="second" aria-selected="false">Second Table</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="third-table-tab" data-toggle="tab" href="#third" role="tab" aria-controls="third" aria-selected="false">Third Table</a>
+		  </li>
+		</ul>
+
+		<div class="tab-content" id="myTabContent">
+		  <div class="tab-pane fade show active" id="first" role="tabpanel" aria-labelledby="first-table-tab">
+				<div class="container">
+					<table class="table table-striped table-bordered table-hover">
+					  <thead>
+					    <tr>
+					      <th>#</th>
+					      <th>Subject</th>
+					      <th>Certification method</th>
+					      <th>Made homework / lab work</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Web programming</td>
+					      <td>Exam</td>
+					      <td>30%</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>Basics of combinatorics</td>
+					      <td>Test</td>
+					      <td>45%</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Introdeuction in AaDS</td>
+					      <td>Exam</td>
+					      <td>30%</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+
+		  <div class="tab-pane fade" id="second" role="tabpanel" aria-labelledby="second-table-tab">
+				<div class="container">
+					<table class="table table-sm table-striped table-bordered table-hover">
+					  <thead>
+					    <tr>
+					      <th>#</th>
+					      <th>Subject</th>
+					      <th>Certification method</th>
+					      <th>Made homework / lab work</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <th scope="row">1</th>
+					      <td>Math Analisis</td>
+					      <td>Test</td>
+					      <td>30%</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">2</th>
+					      <td>English</td>
+					      <td>Test</td>
+					      <td>65%</td>
+					    </tr>
+					    <tr>
+					      <th scope="row">3</th>
+					      <td>Languages & Methods of Programming</td>
+					      <td>Exam</td>
+					      <td>50%</td>
+					    </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+
+		  <div class="tab-pane fade" id="third" role="tabpanel" aria-labelledby="third-table-tab">
+				<table class="table table-responsive">
+					<thead>
+						<th>#</th>
+						<th>Subject</th>
+						<th>Task</th>
+						<th>Deadline</th>
+					</thead>
+					<tbody>
+						<tr class="table-danger">
+							<th score="row">1</th>
+							<td>Web programming</td>
+							<td>Make Bootstrap Project</td>
+							<td>11.12.2018</td>
+						</tr>
+						<tr class="table-success">
+							<th score="row">2</th>
+							<td>Languages & Methods of Programming</td>
+							<td>Make Calculator</td>
+							<td>26.01.2019</td>
+						</tr>
+						<tr class="table-warning">
+							<th scope="row">3</th>
+							<td>Math Analisis</td>
+							<td>Pass Hometasks(Last - 5th)</td>
+							<td>21.01.2019</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 		<div class="container">
-			<table class="table table-sm table-striped table-bordered table-hover">
-			  <thead>
-			    <tr>
-			      <th>#</th>
-			      <th>Subject</th>
-			      <th>Certification method</th>
-			      <th>Made homework / lab work</th>
-			    </tr>
-			  </thead>
-			  <tbody>
-			    <tr>
-			      <th scope="row">1</th>
-			      <td>Math Analisis</td>
-			      <td>Test</td>
-			      <td>30%</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">2</th>
-			      <td>English</td>
-			      <td>Test</td>
-			      <td>65%</td>
-			    </tr>
-			    <tr>
-			      <th scope="row">3</th>
-			      <td>Languages & Methods of Programming</td>
-			      <td>Exam</td>
-			      <td>50%</td>
-			    </tr>
-			  </tbody>
-			</table>
+			<div class="row">
+				<div class="md-8">
+					<div class="media">
+						<img src="Billy_Herrington.jpg" alt="BillyH" height="150" width="150" class="align-self-center mr-3"/>
+						<div class="media-body">
+							<h3> Билли Херрингтон</h3>
+							<p>
+								Билли Херрингтон — актер, более всего известный по съёмкам в гей-порнофильмах 1990-х годов.
+							</p>
+							<p>
+								<h4>Биография</h4>
+								Родился и вырос в Лонг-Айленде в семье учителя карате. С детства занимался боксом, борьбой и карате.
+							</P>
+							<p>
+								В 21 год потерял отца, в 24 года переехал в Нью-Йорк и, бросив боевые искусства, начал заниматься бодибилдингом,
+								достигнув в этом деле определённых успехов. Через какое-то время он с помощью своего знакомого отправил свои
+								фотографии в обнажённом виде в редакцию журнала Playgirl, что принесло ему награду «Настоящий мужчина месяца» и
+								500 долларов в качестве гонорара. Эти фотографии попали на глаза режиссёру Джеймсу Френчу, который два года спустя
+								снял Херрингтона в главной роли в одном из своих гей-фильмов.
+							</p>
+							<p>
+								Херрингтон стал актёром гей-фильмов, получив множество наград от соответствующих организаций и известность
+								в качестве одной из основных «звёзд» этого направления в конце 1990-х годов (по его словам, именно съёмки
+								в этих фильмах помогли ему понять его бисексуальность). Также участвовал во многих телешоу.
+							</p>
+							<p>
+								Осенью 2002 года Херрингтон стал отцом. В первой половине 2000-х годов он работал стриптизёром в гей-клубах США,
+								но в 2008 году объявил о завершении карьеры и уходе на работу в строительную компанию, принадлежащую его родственникам.
+							</P>
+							<p>
+								Погиб в ДТП 3 марта 2018 года.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-
-		<table class="table table-responsive">
-			<thead>
-				<th>#</th>
-				<th>Subject</th>
-				<th>Task</th>
-				<th>Deadline</th>
-			</thead>
-			<tbody>
-				<tr class="table-danger">
-					<th score="row">1</th>
-					<td>Web programming</td>
-					<td>Make Bootstrap Project</td>
-					<td>9.12.2018</td>
-				</tr>
-				<tr class="table-success">
-					<th score="row">2</th>
-					<td>Languages & Methods of Programming</td>
-					<td>Make Calculator</td>
-					<td>26.01.2019</td>
-				</tr>
-				<tr class="table-warning">
-					<th scope="row">3</th>
-					<td>Math Analisis</td>
-					<td>Pass Hometasks(Last - 5th)</td>
-					<td>21.01.2019</td>
-				</tr>
-			</tbody>
-		</table>
-
-
 
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
