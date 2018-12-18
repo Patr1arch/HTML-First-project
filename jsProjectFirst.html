@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <title>jsProject</title>
+    <style>
+    .dropdown-submenu{
+      position: relative;
+    }
+
+    .dropdown-submenu a::after{
+      transform: rotate(-90deg);
+      position: absolute;
+      right: 3px;
+      top: 40%;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+      display: flex;
+      flex-direction: column;
+      position: absolute !important;
+      margin-top: -30px;
+      left: 100%;
+    }
+
+    @media (max-width: 992px) {
+      .dropdown-menu{
+       width: 50%;
+      }
+
+      .dropdown-menu .dropdown-submenu{
+       width: auto;
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">Катюша</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+						<p>
+							Расцветали яблони и груши,<br>
+							Поплыли туманы над рекой.<br>
+							Выходила на берег Катюша,<br>
+							На высокий берег на крутой.<br>
+						<br>
+							Выходила, песню заводила <br>
+							Про степного сизого орла,<br>
+							Про того, которого любила,<br>
+							Про того, чьи письма берегла.<br>
+						<br>
+							Ой ты, песня, песенка девичья,<br>
+ 						 	Ты лети за ясным солнцем вслед <br>
+ 						 	И бойцу на дальнем пограничье <br>
+ 						 	От Катюши передай привет. <br>
+						<br>
+							Пусть он вспомнит девушку простую, <br>
+							Пусть услышит, как она поёт, <br>
+							Пусть он землю бережёт родную, <br>
+							А любовь Катюша сбережёт. <br>
+						<br>
+							Расцветали яблони и груши, <br>
+							Поплыли туманы над рекой. <br>
+							Выходила на берег Катюша, <br>
+							На высокий берег на крутой. <br>
+					 </p>
+					 <p align="right">
+						 Сл. М. В. Исаковского
+						 1938 г.
+					 </p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="https://github.com/Patr1arch/HTMLProjects">
+				<i class="fab fa-github-alt"></i>
+			</a>
+
+    	<button class="navbar-toggler navbar-toggler-right" type="button"
+			 data-toggle="collapse" data-target="#navbarNavDropdown"
+			 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+			</button>
+
+    	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+  			<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+			      <a class="nav-link" href="bootstrapProject.html" >Home <span class="sr-only">(current)</span></a>
+			    </li>
+					<li class="nav-item">
+			      <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal">Катюша <span class="badge badge-info">Modal!	</span></a>
+			    </li>
+     			<li class="nav-item dropdown">
+     				<a class="nav-link dropdown-toggle" href="#"
+						id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      				Main Menu <span class="badge badge-light">2</span>
+     				</a>
+     				<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+								 data-toggle="dropdown" href="#">First Task <span class="badge badge-pill badge-dark">3</span></a>
+      		 			<ul class="dropdown-menu">
+       						<a class="dropdown-item" href="Fints&Piruets5.html">About Me</a>
+       						<a class="dropdown-item" href="Fints&Piruets4.html">Poem</a>
+       						<a class="dropdown-item" href="Fints&Piruets3.html">Content</a>
+      					</ul>
+      				</li>
+      				<li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle"
+								 data-toggle="dropdown" href="#">Second Task <span class="badge badge-pill badge-dark">2</span></a>
+      		 			<ul class="dropdown-menu">
+       						<a class="dropdown-item" href="work.html">Cat</a>
+       						<a class="dropdown-item" href="math.html">Math</a>
+      					</ul>
+      				</li>
+     				</ul>
+     			</li>
+    		</ul>
+    	</div>
+		</nav>
+
+    <div class="container">
+      <form id="ellipse">
+        <p><b>Введите большую ось эллипса</b><br>
+         <input name="aPar" type="number" size="40">
+        <p><b>Введите малую ось эллипса</b><br>
+         <input name="bPar" type="number" size="40">
+         <p><input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+         </p>
+        </form>
+    </div>
+
+    <div class="container">
+      <form id="sum">
+        <p><b>Введите X</b><br>
+         <input name="xPar" type="number" size="40">
+         <p><input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+         </p>
+        </form>
+    </div>
+
+    <div class="container">
+      <form id="array">
+        <p><b>Нажмите на кнопку</b><br>
+         <p><input type="submit" value="Отправить">
+            <!-- <input type="reset" value="Очистить"> -->
+         </p>
+        </form>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <form id="func">
+        <p><b>Введите размерность</b><br>
+          <input type="number" size="40">
+         <p><input type="submit" value="Создать таблицу">
+         </p>
+        </form>
+    </div>
+
+    <div class="container" id="special">
+
+    </div>
+
+    <script type="text/javascript">
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function getArray(n) {
+      var arr = [];
+      for (var i = 0; i < n*n; i++){
+        arr[i] = getRandomInt(0, n)
+      }
+      console.log (arr);
+      return getResultArray(arr);
+    }
+
+    function getResultArray(arr) {
+      arr.sort(function(a, b) {
+        return a - b;
+      });
+      var matrix = [];
+      var k = n*n - 1;
+      for (var i = n - 1; i > -1; i--){
+        console.log(n);
+        matrix[i] = [];
+        if (i % 2 == 1){
+          for (var j = 0; j < n; j++){
+            matrix[i][j] = arr[k];
+            k--;
+          }
+        }
+        else {
+          for (var j = n - 1; j > -1; j--){
+            matrix[i][j] = arr[k];
+            k--
+          }
+        }
+        k--;
+      }
+      return matrix;
+
+    }
+
+    document.getElementById('func').addEventListener('submit', function(e) {
+      n = parseFloat(e.target[0].value);
+      var matrix = getArray(n);
+      console.log(matrix[0]);
+      console.log(matrix[1]);
+      var tble = document.createElement('table');
+      var bdy = document.getElementById('special');
+      tble.style.width = '100%';
+      tble.setAttribute('border', '1');
+      var tbdy = document.createElement('tbody');
+      for (var i = n - 1; i > -1; i--) {
+        var tr = document.createElement('tr');
+        for (var j = n - 1; j > -1; j--) {
+          var td = document.createElement('td');
+          td.appendChild(document.createTextNode(matrix[i][j]));
+          tr.appendChild(td);
+        }
+        tbdy.appendChild(tr);
+      }
+      tble.appendChild(tbdy);
+      tble.setAttribute('border', '3');
+      tble.setAttribute('class', 'table');
+      tble.setAttribute('class', 'table-dark');
+      bdy.appendChild(tble);
+      e.preventDefault();
+    })
+
+    </script>
+
+    <script type="text/javascript">
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    function matrixArray(rows,columns){
+      var arr = new Array();
+      for(var i=0; i<rows; i++){
+        arr[i] = new Array();
+        for(var j=0; j<columns; j++){
+          arr[i][j] = getRandomInt(-1, 1);
+        }
+      }
+      return arr;
+    }
+
+      document.getElementById('array').addEventListener('submit', function(e) {
+        var M1 = [];
+        var M2 = [];
+        var M = matrixArray(5,8);
+        for (var i = 0; i < 5; i++){
+          var Mm = M[i]
+          for (var j = 0; j < 8; j++){
+            if (Mm[j] < 0) {
+              M2.push(Mm[j]);
+            }
+            if (Mm[j] > 0){
+              M1.push(Mm[j]);
+            }
+          }
+        }
+        console.log(M1);
+        console.log(M2);
+        e.preventDefault();
+      })
+
+    </script>
+
+      <script type="text/javascript">
+
+          document.getElementById('sum').addEventListener('submit', function(e) {
+            var x, xM;
+            var res = 0;
+            var a = 4;
+            var dop = 6;
+            x = parseFloat(e.target[0].value);
+            for (var i = 3; i < 13; i++){
+              a = a * 2;
+              xM = Math.pow(x, dop)
+              res = res + (xM/a);
+              dop = dop + 3;
+            }
+            console.log(res);
+            e.preventDefault();
+          })
+
+      </script>
+
+      <script type="text/javascript">
+          var a,b;
+          var pi = 3.1415;
+
+          document.getElementById('ellipse').addEventListener('submit', function(e) {
+            a = parseFloat(e.target[0].value);
+            b = parseFloat(e.target[1].value);
+            console.log(a*b*pi);
+            e.preventDefault();
+          })
+
+      </script>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
