@@ -192,6 +192,7 @@
         arr[i] = getRandomInt(0, n)
       }
       console.log (arr);
+
       return getResultArray(arr);
     }
 
@@ -199,6 +200,10 @@
       arr.sort(function(a, b) {
         return a - b;
       });
+      console.log(arr[0]);
+      console.log(arr[15]);
+      console.log(arr[16]);
+      console.log(arr[-1]);
       var matrix = [];
       var k = n*n - 1;
       for (var i = n - 1; i > -1; i--){
@@ -213,10 +218,9 @@
         else {
           for (var j = n - 1; j > -1; j--){
             matrix[i][j] = arr[k];
-            k--
+            k--;
           }
         }
-        k--;
       }
       return matrix;
 
@@ -246,6 +250,9 @@
       tble.setAttribute('class', 'table');
       tble.setAttribute('class', 'table-dark');
       bdy.appendChild(tble);
+      console.log(matrix[0][3]);
+      console.log(matrix[0][0]);
+
       e.preventDefault();
     })
 
