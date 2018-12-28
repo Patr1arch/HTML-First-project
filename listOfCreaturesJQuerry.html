@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title> List of Creatures</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var a = [
+          {
+            text: 'Животные',
+            childs: [
+              {
+                text: 'Млекопитающие',
+                childs: ['Коровы', 'Ослы', 'Собаки', 'Тигры']
+              },
+              {
+                text: 'Другие',
+                childs: ['Змеи', 'Птицы', 'Ящерицы']
+              },
+            ]
+          },
+          {
+            text: 'Рыбы',
+            childs: [
+            {
+              text: 'Аквариумные',
+              childs: ['Гуппи', 'Скалярии']
+            },
+            {
+              text: 'Морские',
+              childs: ['Морская форель']
+            },
+            ]
+          }
+        ];
+
+        $('<ul>', {id: 'ul'}).appendTo('body');
+        $('<div>', {id: 'div'}).appendTo('body');
+
+        var firstCreature;
+        var secondCreature;
+        var subSubCreature;
+        var subSC;
+        var subFC;
+
+        function createList(firstCreature) {
+          if (firstCreature < a.length) {
+            $('<li>', {id: 'li', text: a[firstCreature].text}).appendTo('#ul');
+            $('<ul>').appendTo('li:last');
+            secondCreature = firstCreature;
+            createSubList(0);
+            firstCreature++;
+            createList(firstCreature);
+          }
+        }
+
+        function createSubList(subFC) {
+          if (subFC < a[secondCreature].childs.length) {
+            $('<li>', {id: 'li', text: a[secondCreature].childs[subFC].text}).appendTo('ul:not(#subul):last');
+            $('<ul>', {id: 'subul'}).appendTo('li:last');
+            subSC = subFC;
+            createSubSubList(0);
+            subFC++;
+            createSubList(subFC);
+          }
+        }
+
+        function createSubSubList(subSubCreature) {
+          if (subSubCreature < a[secondCreature].childs[subSC].childs.length) {
+            $('<li>', {text: a[secondCreature].childs[subSC].childs[subSubCreature]})
+              .appendTo('ul:(#subul):last');
+            subSubCreature++;
+            createSubSubList(subSubCreature);
+          }
+        }
+
+        createList(0);
+
+        $('li').click(function(event){
+  				event.stopPropagation();
+  				$(this).children().fadeToggle();
+  			})
+
+  			$('li').each(function(){
+  				$('#div').append($('<p>', { text: $(this).clone().children().remove()
+            .end().text() + $(this).find('li').length}));
+  			})
+
+      });
+    </script>
+  </body>
+</html>

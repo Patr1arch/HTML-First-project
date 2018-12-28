@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> List of animals</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var a = [
+        {
+          text: 'Животные',
+          childs: [
+            {
+              text: 'Млекопитающие',
+              childs: ['Коровы', 'Ослы', 'Собаки', 'Тигры']
+            },
+            {
+              text: 'Другие',
+              childs: ['Змеи', 'Птицы', 'Ящерицы']
+            },
+          ]
+        },
+        {
+          text: 'Рыбы',
+          childs: [
+          {
+            text: 'Аквариумные',
+            childs: ['Гуппи', 'Скалярии']
+          },
+          {
+            text: 'Морские',
+            childs: ['Морская форель']
+          },
+          ]
+        }
+      ];
+
+      var subli;
+      var subul;
+      var subsubli;
+      var subsubul;
+      var li;
+      var ul = document.createElement('ul');
+      var firstCreature;
+      var secondCreature;
+      var subSubCreature;
+      var subSC;
+      var subFC;
+
+      document.body.appendChild(ul);
+
+      function createList(firstCreature) {
+        if (firstCreature < a.length) {
+          li = document.createElement('li');
+          li.innerHTML = a[firstCreature].text;
+          ul.appendChild(li);
+          subul = document.createElement('ul');
+          li.appendChild(subul);
+          secondCreature = firstCreature;
+          createSubList(0);
+          firstCreature++;
+          createList(firstCreature);
+        }
+      }
+
+      function createSubList(subFC) {
+        if (subFC < a[secondCreature].childs.length) {
+          subli = document.createElement('li');
+          subli.innerHTML = a[secondCreature].childs[subFC].text;
+          subul.appendChild(subli);
+          subsubul = document.createElement('ul');
+          subli.appendChild(subsubul);
+          subSC = subFC;
+          createSubSubList(0);
+          subFC++;
+          createSubList(subFC);
+        }
+      }
+
+      function createSubSubList(subSubCreature) {
+        if (subSubCreature < a[secondCreature].childs[subSC].childs.length) {
+          subsubli = document.createElement('li');
+          subsubli.innerHTML = a[secondCreature].childs[subSC].childs[subSubCreature];
+          subsubul.appendChild(subsubli);
+          subSubCreature++;
+          createSubSubList(subSubCreature);
+        }
+      }
+
+      createList(0);
+
+    </script>
+
+    <script type="text/javascript">
+      function findChild(el) {
+        if (el.children.length > 0) {
+          for (let i = 0; i < el.children.length; i++) {
+            console.log(el.children[i]);
+            findChild(el.children[i]);
+          }
+        }
+      }
+      findChild(document);
+
+    </script>
+  </body>
+</html>
