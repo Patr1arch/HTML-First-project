@@ -49,7 +49,7 @@
       }
     ];
 
-    function generateList(childs) {
+    function createList(childs) {
 
       var ul = document.createElement('ul');
       for (var child of childs) {
@@ -59,12 +59,12 @@
         if (typeof child !== 'object')
           li.append(child)
         else if (child.childs !== undefined)
-          li.append(generateList(child.childs))
+          li.append(createList(child.childs))
         ul.append(li);
       }
       return ul;
     }
-    document.body.append(generateList(m))
+    document.body.append(createList(m))
   </script>
 
   <script type="text/javascript">
